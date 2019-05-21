@@ -3,16 +3,17 @@ Simple class to help setting page titles, breadcrumbs and other misc elements th
 
 ## Setup
 1. Add Page_builder.php to the libraries folder
-2. Autoload or load from somewhere else
-3. Add output tags to your views
-4. SetXX and AddXX form controllers
+2. Add the view_helper.php to the helpers folder (This has various helper functions for outputing bootstrap html, needed for buttons in page_builder)
+3. Autoload or load from somewhere else
+4. Add output tags to your views
+5. SetXX and AddXX form controllers
 
 ~~~
 ## Breadcrumbs
 $this->page_builder
-			->addCrumb('Home', '/')
-      ->addCrumb('Events', 'events')
-      ->addCrumb('Event Detail');
+	->addCrumb('Home', '/')
+	->addCrumb('Events', 'events')
+	->addCrumb('Event Detail');
       
 echo $this->page_builder->outputCrumbs();
 
